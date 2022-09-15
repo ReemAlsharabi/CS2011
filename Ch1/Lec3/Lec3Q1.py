@@ -1,3 +1,11 @@
+'''
+Exercise 1.3. A matched string is a sequence of {, }, (, ), [, and ] characters
+that are properly matched. For example, “{{()[]}}” is a matched string, but
+this “{{()]}” is not, since the second { is matched with a ]. Show how to
+use a stack so that, given a string of length n, you can determine if it is a
+matched string in O(n) time.
+'''
+
 openingB = ['[', ']','(',]
 closingB=[')','{', '}']
 stack = []
