@@ -5,15 +5,13 @@ using namespace std;
 
 ArrBasedList::ArrBasedList()
 {
-	//a = new string[10];
+	a = new string[10];
 	s = 0; // the number of elements in the list
 }
-/*ArrBasedList::~ArrBasedList()
+ArrBasedList::~ArrBasedList()
 {
-	for (int i=0; i<10; i++)
-		delete a[i];
 	delete [] a;
-}*/
+}
 int ArrBasedList::size()
 {
 	return s;
@@ -40,7 +38,7 @@ void ArrBasedList::add(int i, string x)
 }
 string ArrBasedList::remove(int i)
 {
-	string x = a[i];				// store the element
+	string x = a[i]; // store the element
 	for (int j = i; j < s - 1; j++) // start from the right
 		a[j] = a[j + 1];
 	s--;
