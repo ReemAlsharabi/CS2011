@@ -5,11 +5,11 @@ using namespace std;
 class ArrBasedList
 {
     private:
-        string a[10];
+        string *a;
 	    int s;
     public:
         ArrBasedList();
-        //~ArrBasedList();
+        ~ArrBasedList();
         int size();
         string get(int);
         void set(int, string);
