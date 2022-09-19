@@ -5,8 +5,8 @@ using namespace std;
 class ArrBasedList
 {
     private:
-        char *a;
-	    int s;
+	char *a;
+	int s;
     public:
         ArrBasedList();
         ~ArrBasedList();
