@@ -1,5 +1,7 @@
 #include "ArrBasedList.h"
+#include <iostream>
 #include <string>
+
 int main()
 {
     ArrBasedList l;
