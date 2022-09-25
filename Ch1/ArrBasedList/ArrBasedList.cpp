@@ -1,6 +1,5 @@
 #include "ArrBasedList.h"
 #include <string>
-#include <iostream>
 using namespace std;
 
 ArrBasedList::ArrBasedList()
