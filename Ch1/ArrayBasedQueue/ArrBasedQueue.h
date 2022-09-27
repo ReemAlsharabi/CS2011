@@ -8,6 +8,7 @@ class ArrBasedQueue
         string *a;
 	    int n; // number of elemnts
         int j; // first element's index
+        int size; //a->length()
     public:
         ArrBasedQueue();
         ~ArrBasedQueue();
