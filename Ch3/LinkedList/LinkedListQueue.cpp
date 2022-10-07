@@ -10,7 +10,6 @@ void LinkedListQueue::push(string x)
     Node *a = new Node;
     a->data = x;
     a->next = tail;
-    tail = a;
     if (n==0)
     {
         head = a;
@@ -19,7 +18,7 @@ void LinkedListQueue::push(string x)
     else
     {
         tail->next = a;
-		tail = a;
+	tail = a;
     }
     n++;
 }
@@ -27,11 +26,11 @@ void LinkedListQueue::push(string x)
 string LinkedListQueue::pop()
 {
     if (n==0)
-		return NULL;
+	return NULL;
 	Node *a = head;
 	head = head->next;
 	n--;
 	if (n==0)
-		tail = NULL;
+	    tail = NULL;
 	return a->data;
 }
