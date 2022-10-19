@@ -40,9 +40,12 @@ public class DoublyLinkedList
 		node.data = o;
 		node.next = w;
 		node.previous = w.previous;
-
+		w.previous = node;
+		node.previous.next = node;
+		/*
 		w.previous.next = node; //node.previous.next
 		w.previous = node; //node.next.previous
+		*/
 		n++;
 	}
 	public void add(int i, Object o) //O(min(i, n-i))
@@ -69,7 +72,8 @@ public class DoublyLinkedList
 	}
 	public void addLast(Object o) //O(min(i, n-i))
 	{
-		add(n-1, o);
+		Node d = dummy;
+		addBefore(d, o);
 	}
 	public Object removeFirst() //O(min(i, n-i))
 	{
