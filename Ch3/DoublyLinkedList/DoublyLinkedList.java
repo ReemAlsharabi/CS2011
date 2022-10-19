@@ -65,7 +65,7 @@ public class DoublyLinkedList
 		return n.data;
 	}
 
-	//Use the doubly linked lins as a Deque
+	//Use the doubly linked list as a Deque
 	public void addFirst(Object o) //O(min(i, n-i))
 	{
 		add(0, o);
