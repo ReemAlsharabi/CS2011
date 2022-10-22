@@ -1,7 +1,7 @@
 public class SelectionSort
 {
 	//selection sort both best and worst case: O(n^2)
-	public void selectionSort(int a[]) // nondecreasing
+	public void sort(int a[]) // nondecreasing
 	{
 		for (int i=0; i<a.length-1; i++)
 		{
