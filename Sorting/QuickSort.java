@@ -1,6 +1,5 @@
-public class QuickSort
+public class QuickSort //O(nlogn)
 {
-	//O(nlogn)
 	public void sort(int[] arr, int l, int r)
 	{
 		if (l<r)
