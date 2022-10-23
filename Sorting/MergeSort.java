@@ -1,6 +1,5 @@
-public class MergeSort
+public class MergeSort // O(nlogn)
 {
-	// O(nlogn)
 	public void sort(int[] arr, int l, int r)
 	{
 		if (l<r) //elements are > 1
@@ -22,7 +21,6 @@ public class MergeSort
         
         while (k<sorted.length)
         {
-        	
         	if(j<=r && arr[i] > arr[j])
         	{
         		sorted[k] = arr[j];
