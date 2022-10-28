@@ -1,4 +1,4 @@
-public class Sorting
+public class selectionSort
 {
 	public static void main(String args[])
 	{
@@ -20,8 +20,6 @@ public class Sorting
 		selectionSort(arr1); // nondecreasing strings
 		for (int i=0; i<arr1.length; i++)
 			System.out.print(arr1[i] + " ");
-		
-		
 	}
 	
 	//selection sort both best and worst case: O(n^2)
