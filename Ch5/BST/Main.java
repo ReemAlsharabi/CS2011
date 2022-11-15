@@ -15,5 +15,7 @@ public class Main
 		
         System.out.println("\nmax = " + t.max());
 
+        System.out.println("\nsearch: " + t.search(15));
+        
 	}
 }
