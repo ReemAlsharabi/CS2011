@@ -41,8 +41,8 @@ class BST
     }
     public Node search(Node n, int data)
     {
-        if (n==null)
-            return null;
+        if (n==null || n.data == data)
+            return n;
         else if(n.data < data)
             return search(n.right, data);
         else
