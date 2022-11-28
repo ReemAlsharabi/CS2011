@@ -6,7 +6,7 @@ use a stack so that, given a string of length n, you can determine if it is a
 matched string in O(n) time.
 '''
 
-openingB = ['[', ']','(',]
+openingB = ['[', ']','(']
 closingB=[')','{', '}']
 stack = []
 x = input("Enter: ")
