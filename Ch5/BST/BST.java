@@ -28,12 +28,31 @@ class BST
     }
     public int max(Node n)
     {
+    	/*
         if (n==null)
             return -1;
+        
         Node current = n;
         while (current.right != null)
             current = current.right;
+        
         return current.data;
+        */
+    	if (n == null)
+    		return -1;
+        else
+        {
+        	int max = n.data;
+        	int left = max(n.left);
+            int right = max(n.right);
+         
+            if (left > max)
+            	max = left;
+            if (right > max)
+            	max = right;
+
+        	return max;
+        }
     }
     public Node search(int data)
     {
