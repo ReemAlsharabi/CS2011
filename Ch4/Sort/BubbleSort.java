@@ -2,7 +2,7 @@ public class BubbleSort
 {
   //Best case: O(n)
   //Worst case: O(n^2)
-	public void sort(int[] arr)
+	public static void sort(int[] arr)
 	{
 		boolean flag = true;
 		for (int i = 0; i<arr.length-1; i++)
@@ -19,5 +19,14 @@ public class BubbleSort
 			if (flag)
 				break;
 		}
+	}
+	
+	public static void main(String args[])
+	{
+		int arr[] = {1, 9, 3, 8, -1, 100, 0, 2, 8, 10};
+		
+		sort(arr); // nondecreasing
+		for (int i=0; i<arr.length; i++)
+			System.out.print(arr[i] + " ");
 	}
 }
