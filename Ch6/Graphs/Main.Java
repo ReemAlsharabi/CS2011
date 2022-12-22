@@ -17,7 +17,7 @@ public class Main
 		{
 			System.out.print("Enter the first vertix: ");
 			int u = sc.nextInt();
-			System.out.print("Enter the second edge: ");
+			System.out.print("Enter the second vertix: ");
 			int v = sc.nextInt();
 			
 			adjMatrix[u][v] = 1;
