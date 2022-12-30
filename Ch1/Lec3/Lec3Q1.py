@@ -5,7 +5,6 @@ this “{{()]}” is not, since the second { is matched with a ]. Show how to
 use a stack so that, given a string of length n, you can determine if it is a
 matched string in O(n) time.
 '''
-
 openingB = ['[', '{','(']
 closingB=[']','}', ')']
 stack = []
@@ -19,15 +18,7 @@ for i in x:
             stack.pop()
         else:
             valid = False
-if valid and not stack:
-    print("Valid")
-else:
-    print("Not Valid") == closingB.index(i):
-            stack.pop()
-        else:
-            if not stack:
-                valid = False
-   
+            
 if valid and not stack:
     print("Valid")
 else:
