@@ -26,6 +26,23 @@ class BST
     {
         return max(root);
     }
+    public int secondLargest(Node root)
+    {
+    	if (root == null)
+    		return -1;
+    	Node current = root;
+    	int secondL = current.data;
+        while (current.right != null)
+        {
+        	secondL = current.data;
+        	current = current.right;
+        }
+    	return secondL;
+    }
+    public int secondLargest()
+    {
+    	return secondLargest(root);
+    }
     public int max(Node n)
     {
     	/*
