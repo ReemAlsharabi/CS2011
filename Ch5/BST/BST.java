@@ -22,6 +22,20 @@ class BST
             return n;
         }
     }
+    public boolean isValidBST()
+    {
+        return validate(root, Long.MIN_VALUE, Long.MAX_VALUE);
+    }
+    public boolean validate(Node root, long left, long right)
+    {
+        if (root == null)
+            return true;
+        if (!(root.data < right && root.data > left))
+            return false;
+        return validate(root.left, left, root.data) 
+        && validate(root.right, root.data, right);
+
+    }
     public int max()
     {
         return max(root);
