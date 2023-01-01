@@ -14,7 +14,8 @@ public class Main
 		t.inOrder();
 		
         System.out.println("\nmax = " + t.max());
-
+        System.out.println("\nsecond largest = " + t.secondLargest());
+        System.out.println("\nis BST? " + t.isValidBST());
         System.out.println("\nsearch: " + t.search(15));
         
 	}
