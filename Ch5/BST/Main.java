@@ -12,7 +12,7 @@ public class Main
 		t.insert(27);
 
 		t.inOrder();
-		
+
         System.out.println("\nmax = " + t.max());
         System.out.println("\nsecond largest = " + t.secondLargest());
         System.out.println("\nis BST? " + t.isValidBST());
