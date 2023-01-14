@@ -40,6 +40,8 @@ class AVLTree
     	updateHeight(x);
     	return x;
     }
+    /*
+    // the code as in the slides
     public Node rebalance(Node z)
     {
     	updateHeight(z);
@@ -54,18 +56,39 @@ class AVLTree
     			z = rotateLeft(z);
     		}
     	}
-    		else if (balance < -1)
+    	else if (balance < -1)
+    	{
+    		if(height(z.left.left) > height(z.left.right))
+    			z = rotateRight(z);
+    		else
     		{
-    			if(height(z.left.left) > height(z.left.right))
-    				z = rotateRight(z);
-    			else
-    			{
-    				z.left = rotateLeft(z.left);
-    				z = rotateRight(z);
-    			}
-    		}
+    			z.left = rotateLeft(z.left);
+    			z = rotateRight(z);
+   			}
+    	}
     	return z;
     }
+    */
+    // same code but easier to read
+    public Node rebalance(Node z)
+    {
+    	updateHeight(z);
+    	int balance = getBalance(z);
+    	if (balance > 1)
+    	{
+    		if (height(z.right.left) > height(z.right.right))
+    			z.right = rotateRight(z.right);
+    		z = rotateLeft(z);
+    	}
+    	else if (balance < -1)
+    	{
+    		if(height(z.left.right) > height(z.left.left))
+   				z.left = rotateLeft(z.left);
+    		z = rotateRight(z);
+    	}
+    	return z;
+    }
+    
     public Node insertRecursive(Node n, int key)
     {
         if (n==null)
@@ -86,6 +109,7 @@ class AVLTree
             current = current.right;
         return current.data;
     }
+    
     public Node search(Node n, int data)
     {
     	System.out.println("entered search");
@@ -96,6 +120,7 @@ class AVLTree
         else
             return search(n.left, data);
     }
+    
     public int size(Node n)
     {
         if (n == null)
@@ -116,6 +141,7 @@ class AVLTree
         }
         	
     }
+    
     public void preOrder(Node n)
     {
         if (n==null)
@@ -127,6 +153,7 @@ class AVLTree
         	preOrder(n.right);
         }
     }
+    
     public void postOrder(Node n)
     {
         if (n==null)
@@ -138,6 +165,7 @@ class AVLTree
         	System.out.print(n.data + " ");
         }
     }
+    
     public int sum(Node n)
     {
         int sum = 0;
